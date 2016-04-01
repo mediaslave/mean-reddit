@@ -36,7 +36,7 @@
         </span>
 
           <span>
-            <a href="#/posts/{{$index}}">Comments</a>
+            <a href="#/posts/{{post._id}}">Comments</a>
           </span>
       </div>
 
@@ -77,7 +77,7 @@
 
   <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
     <span class="glyphicon glyphicon-thumbs-up"
-      ng-click="upVotes(comment)"></span>
+      ng-click="upVote(comment)"></span>
     {{comment.upvotes}} - by {{comment.author}}
     <span style="font-size:20px; margin-left:10px;">
       {{comment.body}}
